@@ -1,9 +1,13 @@
+// _app js 는 가장 먼저 호출된다
+
 import NavBar from "../components/NavBar";
 
-export default function Home() {
+export default function App({ Component, pageProps }) {
   return (
     <div>
-      <h1>hello</h1>
+      <NavBar />
+      <Component {...pageProps} />
+      <span>hello</span>
       <style jsx>{`
         nav {
           background-color: tomato;
