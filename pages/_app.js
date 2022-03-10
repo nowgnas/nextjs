@@ -1,21 +1,12 @@
 // _app js 는 가장 먼저 호출된다
 
-import NavBar from "../components/NavBar";
+import Layout from "../components/Layout";
+import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   return (
-    <div>
-      <NavBar />
+    <Layout>
       <Component {...pageProps} />
-      <span>hello</span>
-      <style jsx>{`
-        nav {
-          background-color: tomato;
-        }
-        a {
-            text-decoration = none;
-        }
-      `}</style>
-    </div>
+    </Layout>
   );
 }
